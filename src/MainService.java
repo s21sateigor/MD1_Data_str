@@ -35,5 +35,32 @@ public class MainService
         System.out.println("One student: " + oneStudent);
         //sniedziņš
         studentMyStack.print();
+
+        System.out.println("--Queue Numbers--");
+        MyQueue<Integer> numbersQueue = new MyQueue<>();
+        numbersQueue.enqueue(5);
+        numbersQueue.enqueue(6);
+        numbersQueue.enqueue(7);
+        numbersQueue.enqueue(8);
+        numbersQueue.enqueue(9);
+        System.out.println("All queue elements: ");
+        numbersQueue.print();
+
+        System.out.println("Dequeued element: " + numbersQueue.dequeue());
+        System.out.println("Queue size: " + numbersQueue.size());
+        numbersQueue.clear();
+
+        System.out.println("--Queue Students--");
+        MyQueue<Student> studentMyQueue = new MyQueue<>();
+        studentMyQueue.enqueue(new Student("Aleksejs", "Bērziņš", "010702-67675"));
+        studentMyQueue.enqueue(new Student("Liene", "Bērziņa", "010301-67675"));
+        studentMyQueue.enqueue(new Student("Andris", "Bērziņš", "010901-75754"));
+        System.out.println("All student queue elements: ");
+        studentMyQueue.print();
+        System.out.println("Dequeued element: " + studentMyQueue.dequeue());
+        System.out.println("Queue size: " + studentMyQueue.size());
+        studentMyStack.clear();
+
     }
+
 }
