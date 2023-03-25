@@ -61,6 +61,31 @@ public class MainService
         System.out.println("Queue size: " + studentMyQueue.size());
         studentMyStack.clear();
 
+        System.out.println("--Deque numbers--");
+
+        MyDeque<Integer> numbersMyDeque = new MyDeque<>();
+        numbersMyDeque.enqueueAtEnd(5);
+        numbersMyDeque.enqueueAtEnd(6);
+        numbersMyDeque.enqueueAtEnd(7);
+        numbersMyDeque.enqueueAtEnd(8);
+        numbersMyDeque.enqueueAtEnd(9);
+        numbersMyDeque.print();
+
+        numbersMyDeque.dequeueFromFront();
+        numbersMyDeque.dequeueFromEnd();
+        numbersMyDeque.print();
+
+        System.out.println("--Deque Students--");
+        MyDeque<Student> studentMyDeque = new MyDeque<>();
+        studentMyDeque.enqueueAtEnd(new Student("Aleksandrs", "Baltiņš", "080808-80800"));
+        studentMyDeque.enqueueAtEnd(new Student("Imants", "Baltiņš", "170203-51233"));
+        studentMyDeque.enqueueAtEnd(new Student("Kristiāns", "Baltiņš", "030108-33800"));
+        studentMyDeque.enqueueAtFront(new Student("Anna", "Kurzemniece", "040203-55132"));
+        studentMyDeque.print();
+        studentMyDeque.dequeueFromFront();
+        studentMyDeque.dequeueFromEnd();
+        studentMyDeque.print();
+
     }
 
 }
